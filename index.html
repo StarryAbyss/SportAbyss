@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-743380-5"></script>
+        <script async src="/scripts/manager.js"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -293,18 +293,6 @@
             }
         }, 5000);
 
-        var handle = "Cpp_Writer";
-        $("a.rated-user:contains(" + handle + "), span.participant:contains(" + handle + ")").each(function () {
-            if ($(this).text() == handle) {
-                var td = $(this).parent();
-                var tr = $(this).parent().parent();
-                if (td.is("td") && tr.is("tr") && !tr.hasClass("disable-highlight-self")) {
-                    info(handle);
-                    tr.addClass("highlighted-row");
-                }
-            }
-        });
-
     function showAnnouncements(json) {
         //info("j=" + JSON.stringify(json));
 
@@ -452,36 +440,6 @@
     </span>
     <br/>
     <span class="side-bell__count" style="position: relative; top: -10px;"></span>
-</div>
-
-
-<div class="header-bell" style="display: none;">
-    <div class="header-bell__img"><span class="header-bell__count"></span></div>
-
-    <div class="bell-details">
-        <div class="bell-details__proto-row-comment">
-            <a class="bell-details__thumbnail-a" href="#"><img src=""/></a>
-            <div class="bell-details__comment"></div>
-            <div class="bell-details__time"></div>
-        </div>
-        <div class="bell-details__proto-row-blog-entry">
-            <a class="bell-details__thumbnail-a" href="#"><img src=""/></a>
-            <div class="bell-details__blog-entry"></div>
-            <div class="bell-details__time"></div>
-        </div>
-        <div class="bell-details__proto-row-comment-reply">
-            <a class="bell-details__thumbnail-a" href="#"><img src=""/></a>
-            <div class="bell-details__comment-reply"></div>
-        </div>
-
-        <div class="bell-details__no-new">
-            There are no new notifications
-        </div>
-
-        <div class="bell-details__recent-link">
-            <a href="/notifications">History (at most 100 notifications)</a>
-        </div>
-    </div>
 </div>
 
 <style>
